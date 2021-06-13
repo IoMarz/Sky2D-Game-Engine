@@ -25,8 +25,6 @@ public class GameState extends State {
 	private int randX, randY;
 	private int score = 0;
 	
-	private Font font28;
-	
 	public GameState(Game game) {
 		super(game);
 		id = 1;
@@ -35,7 +33,6 @@ public class GameState extends State {
 	
 	private void init() {
 		rand = new Random();
-		font28 = new Font("TimesRoman", Font.PLAIN, 28);
 		player = new PlayerEntity(200, 100, 64, 64, game);
 		rock = new RockEntity(1 + rand.nextInt(1200), 1 + rand.nextInt(600), 64, 64, game);
 	}
@@ -47,8 +44,8 @@ public class GameState extends State {
 		player.render(g);
 		rock.render(g);
 		g.setColor(Color.black);
-		g.setFont(font28); 
-		g.drawString("Score: " + score, 4, 28);
+		g.setFont(game.getAssets().getMinecraftiaFont()); 
+		g.drawString("Score: " + score, 4, 40);
 	}
 
 	@Override

@@ -1,5 +1,6 @@
 package com.iomarz.sky2d.graphics;
 
+import java.awt.Font;
 import java.awt.image.BufferedImage;
 
 public class Assets {
@@ -9,6 +10,8 @@ public class Assets {
 	private BufferedImage player, rock;
 
 	private SpriteSheet sheet;
+	
+	private Font minecraftia24;
 	
 	public Assets() {
 		// Initialize images
@@ -21,6 +24,9 @@ public class Assets {
 		// Initialize game assets
 		rock = sheet.crop(0, 0, 64, 64);
 		player = sheet.crop(64, 0, 64, 64);
+		
+		// Initialize fonts
+		minecraftia24 = FontLoader.loadFont("/font/Minecraftia-Regular.ttf", 24f);
 	}
 	
 	// Getters
@@ -40,6 +46,10 @@ public class Assets {
 	
 	public SpriteSheet getSheet() {
 		return sheet;
+	}
+	
+	public Font getMinecraftiaFont() {
+		return minecraftia24;
 	}
 
 }
