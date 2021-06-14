@@ -42,8 +42,8 @@ public class PlayerEntity extends Entity {
 	// Mouse Input Example
 	private void clickToMove() {
 		if (game.getMouse().clickToMove) {
-			x = game.getMouse().getMouseEvent().getX();
-			y = game.getMouse().getMouseEvent().getY();
+			x = game.getMouse().getMouseX();
+			y = game.getMouse().getMouseY();
 		}
 	}
 

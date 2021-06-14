@@ -45,6 +45,7 @@ public class Game implements Runnable {
 		// switchState.stateSwitch(0);
 		win.getFrame().addKeyListener(keys);
 		win.getCanvas().addMouseListener(mouse);
+		win.getCanvas().addMouseMotionListener(mouse);
 	}
 	
 	// Game Loop
