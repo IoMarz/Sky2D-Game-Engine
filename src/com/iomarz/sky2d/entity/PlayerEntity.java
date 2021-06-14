@@ -1,20 +1,26 @@
 package com.iomarz.sky2d.entity;
 
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 
 import com.iomarz.sky2d.game.Game;
+import com.iomarz.sky2d.graphics.ImageRotation;
 
 public class PlayerEntity extends Entity {
 
+	private BufferedImage rotated;
+	
 	public PlayerEntity(float x, float y, int width, int height, Game game) {
 		super(x, y, width, height, game);
 		health = 20;
 		alive = true;
+		speed = 5.0f;
+		rotated = game.getAssets().getPlayer();
 	}
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(game.getAssets().getPlayer(), (int) x, (int) y, width, height, null);
+		g.drawImage(rotated, (int) x, (int) y, width, height, null);
 	}
 
 	@Override
@@ -37,6 +43,10 @@ public class PlayerEntity extends Entity {
 		if (game.getKeys().right) {
 			x += speed;
 		}
+		
+		if (game.getKeys().rotate) {
+			rotate();
+		}
 	}
 	
 	// Mouse Input Example
@@ -45,6 +55,18 @@ public class PlayerEntity extends Entity {
 			x = game.getMouse().getMouseX();
 			y = game.getMouse().getMouseY();
 		}
+	}
+	
+	double r = 0;
+	
+	private void rotate() {
+		r+=10;
+		/*
+		if (r >= 359) {
+			r = 0;
+		}
+		*/
+		rotated = ImageRotation.rotateImage(game.getAssets().getPlayer(), r);
 	}
 
 }

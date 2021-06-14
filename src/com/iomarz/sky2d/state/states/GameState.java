@@ -1,8 +1,8 @@
 package com.iomarz.sky2d.state.states;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 import java.util.Random;
 
 import com.iomarz.sky2d.entity.PlayerEntity;
