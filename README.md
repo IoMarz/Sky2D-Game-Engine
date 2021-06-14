@@ -6,4 +6,9 @@ A 2D Java Game Engine
 - Game States
 - Rendering using Java AWT
 - Sprite Sheets & Image Loading
-- Custom Fonts (new)
+- Custom Fonts
+- Image Rotation (new)
+
+### TODO:
+- Animation
+- Optimized Rendering?
