@@ -8,6 +8,7 @@ A 2D Java Game Engine
 - Sprite Sheets & Image Loading
 - Custom Fonts
 - Image Rotation (new)
+- Custom Resolutions (new)
 
 ### TODO:
 - Animation
