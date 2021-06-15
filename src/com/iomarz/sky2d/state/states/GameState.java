@@ -56,8 +56,8 @@ public class GameState extends State {
 	}
 	
 	private void rollDice() {
-		randX = 1 + rand.nextInt(1200);
-		randY = 1 + rand.nextInt(600);
+		randX = 1 + rand.nextInt(game.getWin().getWidth() - rock.getWidth());
+		randY = 1 + rand.nextInt(game.getWin().getHeight() - rock.getHeight());
 		rock.setX(randX);
 		rock.setY(randY);
 	}

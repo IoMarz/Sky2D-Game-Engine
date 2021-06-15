@@ -56,7 +56,7 @@ public class MouseInput implements MouseListener, MouseMotionListener {
 	public void mouseMoved(MouseEvent mv) {
 		mouseX = mv.getX();
 		mouseY = mv.getY();
-		System.out.println("MouseX: " + mouseX + " MouseY: " + mouseY);
+		// System.out.println("MouseX: " + mouseX + " MouseY: " + mouseY);
 	}
 	
 	// Getters

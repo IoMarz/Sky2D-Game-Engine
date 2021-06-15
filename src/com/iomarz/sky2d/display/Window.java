@@ -27,7 +27,7 @@ public class Window {
 		
 		frame.setSize(width, height);
 		frame.setLocationRelativeTo(null);
-		frame.setResizable(false);
+		frame.setResizable(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		
@@ -60,11 +60,11 @@ public class Window {
 	}
 	
 	public int getWidth() {
-		return width;
+		return frame.getWidth();
 	}
 	
 	public int getHeight() {
-		return height;
+		return frame.getHeight();
 	}
 	
 	public String getTitle() {
