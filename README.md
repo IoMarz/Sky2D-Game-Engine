@@ -1,5 +1,6 @@
 ## Sky2D-Game-Engine
 A 2D Java Game Engine 
+Remember to add res/ to the java build path when compiling!
 
 ### Features:
 - Keyboard & Mouse Input
@@ -7,8 +8,9 @@ A 2D Java Game Engine
 - Rendering using Java AWT
 - Sprite Sheets & Image Loading
 - Custom Fonts
-- Image Rotation (new)
-- Custom Resolutions (new)
+- Image Rotation
+- Custom Resolutions
+- Screen transitions (new)
 
 ### TODO:
 - Animation
