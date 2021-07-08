@@ -41,7 +41,7 @@ public class Game implements Runnable {
 		win = new Window(1280, 720, "Sky2D 2D Game Engine");
 		assets = new Assets();
 		// By default the game state (with id 1) is loaded first
-		switchState = new SwitchState(1, this);
+		switchState = new SwitchState(1, this, win);
 		// switchState.stateSwitch(0);
 		win.getFrame().addKeyListener(keys);
 		win.getCanvas().addMouseListener(mouse);

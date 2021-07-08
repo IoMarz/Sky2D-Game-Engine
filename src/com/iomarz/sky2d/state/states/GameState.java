@@ -2,13 +2,14 @@ package com.iomarz.sky2d.state.states;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.image.BufferedImage;
 import java.util.Random;
 
+import com.iomarz.sky2d.display.Window;
 import com.iomarz.sky2d.entity.PlayerEntity;
 import com.iomarz.sky2d.entity.RockEntity;
 import com.iomarz.sky2d.game.Game;
 import com.iomarz.sky2d.state.State;
+import com.iomarz.sky2d.state.states.fx.transitions.Wipe;
 
 public class GameState extends State {
 	
@@ -25,8 +26,8 @@ public class GameState extends State {
 	private int randX, randY;
 	private int score = 0;
 	
-	public GameState(Game game) {
-		super(game);
+	public GameState(Game game, Window window) {
+		super(game, window);
 		id = 1;
 		init();
 	}
@@ -36,7 +37,7 @@ public class GameState extends State {
 		player = new PlayerEntity(200, 100, 64, 64, game);
 		rock = new RockEntity(1 + rand.nextInt(1200), 1 + rand.nextInt(600), 64, 64, game);
 	}
-
+	
 	@Override
 	public void render(Graphics g) {
 		g.setColor(Color.GREEN);
@@ -46,6 +47,9 @@ public class GameState extends State {
 		g.setColor(Color.black);
 		g.setFont(game.getAssets().getMinecraftiaFont()); 
 		g.drawString("Score: " + score, 4, 40);
+		// Check of the transitions!!
+		//Wipe.in(g, window, Color.black, 20);
+		Wipe.out(g, window, Color.black, 20);
 	}
 
 	@Override

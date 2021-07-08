@@ -3,13 +3,14 @@ package com.iomarz.sky2d.state.states;
 import java.awt.Color;
 import java.awt.Graphics;
 
+import com.iomarz.sky2d.display.Window;
 import com.iomarz.sky2d.game.Game;
 import com.iomarz.sky2d.state.State;
 
 public class MenuState extends State {
 
-	public MenuState(Game game) {
-		super(game);
+	public MenuState(Game game, Window window) {
+		super(game, window);
 		id = 0;
 	}
 
