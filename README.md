@@ -11,6 +11,7 @@ Remember to add res/ to the java build path when compiling!
 - Image Rotation
 - Custom Resolutions
 - Screen transitions (new)
+- Animation (new)
 
 ### TODO:
 - Animation
