@@ -18,7 +18,9 @@ public class Wipe {
 	}
 	
 	public static void out(Graphics g, Window display, Color c, int speed) {
-		g.fillRect(j, 0, display.getWidth(), display.getHeight());
+		if (j < 0) {
+			g.fillRect(j, 0, display.getWidth(), display.getHeight());
+		}
 		j -= speed;
 		if (j >= display.getWidth()) {
 			j = 0;

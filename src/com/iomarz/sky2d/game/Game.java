@@ -6,6 +6,7 @@ import java.awt.image.BufferStrategy;
 
 import com.iomarz.sky2d.display.Window;
 import com.iomarz.sky2d.graphics.Assets;
+import com.iomarz.sky2d.graphics.animation.AnimationContainer;
 import com.iomarz.sky2d.input.KeyInput;
 import com.iomarz.sky2d.input.MouseInput;
 import com.iomarz.sky2d.state.SwitchState;
@@ -30,6 +31,8 @@ public class Game implements Runnable {
 	private KeyInput keys;
 	private MouseInput mouse;
 	
+	private AnimationContainer anim;
+	
 	public Game(int buffers) {
 		this.buffers = buffers;
 		keys = new KeyInput();
@@ -40,6 +43,7 @@ public class Game implements Runnable {
 	private void init() {
 		win = new Window(1280, 720, "Sky2D 2D Game Engine");
 		assets = new Assets();
+		anim = new AnimationContainer();
 		// By default the game state (with id 1) is loaded first
 		switchState = new SwitchState(1, this, win);
 		// switchState.stateSwitch(0);
@@ -161,6 +165,10 @@ public class Game implements Runnable {
 	
 	public MouseInput getMouse() {
 		return mouse;
+	}
+	
+	public AnimationContainer getAnim() {
+		return anim;
 	}
 
 }
