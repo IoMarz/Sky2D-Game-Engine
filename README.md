@@ -14,7 +14,6 @@ Remember to add res/ to the java build path when compiling!
 - Animation (new)
 
 ### TODO:
-- Animation
 - Optimized Rendering?
 - Custom Framerates
 - UI Elements
